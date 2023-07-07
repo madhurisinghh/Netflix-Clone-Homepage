@@ -1,111 +1,134 @@
-@font-face{
-    font-family: netflix-sans-regular;
-    src:url("../fonts/NetflixSans_W_Rg.woff2");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-    
-    body{
-    padding: 0px;
-    margin: 0px;
-    overflow-y: hidden;
+body{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: black;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
-
-.root{
-    background-size: cover;
-    background-image: radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)) url("../background.png");
-    background-repeat: no-repeat;
-    background-position: center;
+.container::before{
+    content: "";
+    background: url(images/netflix-bg.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: -1;
 }
-
-.navbar{
-    padding-top: 1%;
-    padding-left: 2vw;
-    padding-right: 4vw;
-    height: 10vh;
+.container .navbar{
+    height: 100px;
     display: flex;
-    justify-content: space-between;
+}
+.container .navbar .left{
+    height: 100%;
+    display: flex;
+    float: left;
+}
+.container .navbar .left img{
+    height: 100px;
+    position: absolute;
+    left: 35px;
+}
+.container .navbar .right{
+    display: flex;
+    height: 100px;
+    float: right;
+    position: absolute;
+    right: 50px;
+}
+.container .navbar .right .language{
+    margin: auto;
     align-items: center;
-}
-
-.img-logo{
-  width:14%;
-  color: #e50914;
-}
-
-.btn-sign-in {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 20px;
-    padding-right: 20px;
-   background-color: #e50914;
-   color: white;
-   cursor:pointer;
-   width: inline-block;
-   font-family: Arial, Helvetica, sans-serif;
-}
-
-.main-container{
-    width:100%;
-    height:90vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-.main-titles-container{
-    width: 50%;
-    text-align: center;
+    font-size: 18px;
+    padding: 7px 10px;
     color: white;
-}
-
-.main-title{
-    font-family: netflix-sans-regular;
-    font-size: 3.2em;
-    margin-bottom: 14px;
-    line-height: 1.1;
-
-}
-
-.main-subtitle{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-.main-call-to-action{
-    font-family: Arial, Helvetica, sans-serif;
-    font: 1.2em;
-}
-
-.main-email-container{
-    width: 55%;
-    height: fit-content;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main-email-container-input{
-    outline: none;
-    border: none;
-    padding: 20px 10px;
-    font-size: 1em;
-}
-
-.btn-get-started{
+    background: none;
     cursor: pointer;
-    padding: 18px 32px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e50914;
+    margin-right: 15px;
+}
+.container .navbar .right .language option{
+    background-color: grey;
+}
+.container .navbar .right button{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 7px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+}
+.container .navbar .right button a{
+    text-decoration: none;
     color: white;
-    font-size: 1.4em;
-    text-transform: uppercase;
+}
+.container .title{
+    padding: 70px 45px;
+}
+.container .title .content{
+    width: 950px;
+    margin: auto;
+    padding: 75px 0;
     text-align: center;
 }
-
-.btn-get-started:hover {
-    background-color: #ff0b18;
-
+.container .title .content h1{
+    width: 650px;
+    margin: auto;
+    font-size: 3.1rem;
+    text-align: center;
+}
+.container .title .content h2{
+    width: 650px;
+    margin: auto;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.container .title .content form h3{
+    font-size: 1rem;
+    margin: 18px 0;
+    text-align: center;
+}
+.container .title .content form .email{
+    width: 1000px;
+    margin: auto;
+}
+.container .title .content form .email input{
+    height: 60px;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+}
+.container .title .content form .email button{
+    margin: auto;
+    height: 60px;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 7px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: none;
+    margin-left: -5px;
+}
+.container .title .content form .email button:hover{
+    background-color: #f40612;
+}
+.container .title .content form .email button a{
+    text-decoration: none;
+    color: white;
 }

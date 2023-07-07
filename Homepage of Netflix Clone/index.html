@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-  <link
-  rel="shortcut icon" 
-  href="" 
-  type=" image/x-icon"
-  />
-  <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title> 
-  <link rel="stylesheet" href="/css/style.css"/>
-</head> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+</head>
 <body>
 
-    <div class="root">
+    <div class="container">
         <nav class="navbar">
-            <img class="img-logo" src="./C:\Users\Asus\OneDrive\Desktop\logo.png" alt="Netflix Logo"/>
-            <button class="btn-sign-in">Sign in</button>
+            <div class="left">
+                <img src="images/netflix-logo.png" alt="">
+            </div>
+            <div class="right">
+                <select name="language" class="language">
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                </select>
+                <button><a href="#">Sign In</a></button>
+            </div>
         </nav>
-    <div class="main-container">
-        <div class="main-titles-container">
-            <h1 class="maintitle">Unlimated movies, TV shows and more.</h1>
-            <h2 class="main-subtitle">Watch anywhere. Cancel anytime.</h2>
-            <p class="main-call-to-action">
-                Ready to watch? Enter your email to create or restart your membership.
-            </p>
+
+        <div class="title">
+            <div class="content">
+                <h1>Unlimited movies, TV shows and more.</h1>
+                <h2>Watch anywhere. Cancel anytime.</h2>
+                <form action="#">
+                    <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                    <div class="email">
+                        <input type="email" name="email" placeholder="Email address">
+                        <button><a href="#">Get Started  ></a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="main-email-container">
-        <input class="mail-email-container-input"
-        type="email" 
-        placeholder="Email address"/>
-        <div class="btn-get-started">Get started</div>
-    </div>
-</div>
-</div>
 </body>
 </html>
